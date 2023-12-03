@@ -1,16 +1,14 @@
 import  javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import javafx.fxml.FXMLLoader;
 public class Main extends Application implements EventHandler<ActionEvent> {
     Button button;
     Pane pane;
@@ -22,26 +20,37 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Testing");
+       try {
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+           Parent root = fxmlLoader.load();
+
+           primaryStage.setTitle("Testing");
+           primaryStage.setScene(new Scene(root, 600, 600, Color.LIGHTSKYBLUE));
+           primaryStage.show();
+       }catch(Exception e){
+           e.printStackTrace();
+       }
 
 
-        pane = new Pane();
-        button = new Button();
 
-        BackgroundFill backgroundFill = new BackgroundFill(Color.LIGHTSKYBLUE, null, null);
-        Background background = new Background(backgroundFill);
-        pane.setBackground(background);
 
-        button.setText("Click me");
-        button.setOnAction(this);
-        button.setLayoutX(300);
-        button.setLayoutY(300);
-
-        pane.getChildren().add(button);
-        Scene scene = new Scene(pane,600,600, Color.LIGHTSKYBLUE);
-        primaryStage.setScene(scene);
-
-        primaryStage.show();
+//        pane = new Pane();
+//        button = new Button();
+//
+//        BackgroundFill backgroundFill = new BackgroundFill(Color.LIGHTSKYBLUE, null, null);
+//        Background background = new Background(backgroundFill);
+//        pane.setBackground(background);
+//
+//        button.setText("Click me");
+//        button.setOnAction(this);
+//        button.setLayoutX(300);
+//        button.setLayoutY(300);
+//
+//        pane.getChildren().add(button);
+//        Scene scene = new Scene(pane,600,600, Color.LIGHTSKYBLUE);
+//        primaryStage.setScene(scene);
+//
+//        primaryStage.show();
 
 
     }
