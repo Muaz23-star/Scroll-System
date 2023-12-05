@@ -33,27 +33,6 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
 
 
-
-
-//        pane = new Pane();
-//        button = new Button();
-//
-//        BackgroundFill backgroundFill = new BackgroundFill(Color.LIGHTSKYBLUE, null, null);
-//        Background background = new Background(backgroundFill);
-//        pane.setBackground(background);
-//
-//        button.setText("Click me");
-//        button.setOnAction(this);
-//        button.setLayoutX(300);
-//        button.setLayoutY(300);
-//
-//        pane.getChildren().add(button);
-//        Scene scene = new Scene(pane,600,600, Color.LIGHTSKYBLUE);
-//        primaryStage.setScene(scene);
-//
-//        primaryStage.show();
-
-
     }
 
 

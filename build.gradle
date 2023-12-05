@@ -22,6 +22,9 @@ dependencies {
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
     implementation 'org.openjfx:javafx-controls:21'
     implementation 'org.openjfx:javafx-fxml:21'
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security:2.5.5' // Example version
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 test {
