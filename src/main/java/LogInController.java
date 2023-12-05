@@ -4,13 +4,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class SignUpController {
+public class LogInController {
     Stage stage;
 
     @FXML
@@ -18,6 +20,9 @@ public class SignUpController {
 
     @FXML // Add this annotation
     private TextField password;
+
+    @FXML
+    private Label warningLabel;
 
     public void goHome(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sample.fxml")));
@@ -33,11 +38,12 @@ public class SignUpController {
             stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            warningLabel.setVisible(false);
             stage.show();
         }else{
-            System.out.println(username.getText());
-            System.out.println(password.getText());
-            System.out.println("WRONG CREDENTIALS");
+            warningLabel.setTextFill(Color.RED); // Set the text color to red
+            warningLabel.setVisible(true); // Make the label visible
+
         }
     }
 }

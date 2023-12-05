@@ -21,7 +21,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     @Override
     public void start(Stage primaryStage) throws Exception {
        try {
-           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Sample.fxml"));
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
            Parent root = fxmlLoader.load();
 
            primaryStage.setTitle("Testing");

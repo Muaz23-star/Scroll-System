@@ -12,7 +12,7 @@ public class Controller {
     Stage stage;
     @FXML
     public void signup(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LogIn.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

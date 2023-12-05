@@ -19,9 +19,9 @@
             </ImageView>
          </buttons></ButtonBar>
       <ButtonBar layoutX="-20.0" layoutY="236.0" prefHeight="40.0" prefWidth="200.0" />
-    <Button layoutX="394.0" layoutY="302.0" mnemonicParsing="false" onAction="#login" text="Log in" textOverrun="WORD_ELLIPSIS" />
-    <Button layoutX="248.0" layoutY="302.0" mnemonicParsing="false" onAction="#signup" text="Sign up" />
-      <Button layoutX="121.0" layoutY="302.0" mnemonicParsing="false" text="Guest" />
+    <Button layoutX="394.0" layoutY="302.0" mnemonicParsing="false" onAction="#login" text="Sign up" textOverrun="WORD_ELLIPSIS" />
+    <Button layoutX="275.0" layoutY="302.0" mnemonicParsing="false" onAction="#signup" text="Log in" />
+      <Button layoutX="140.0" layoutY="302.0" mnemonicParsing="false" text="Guest" />
       <Label alignment="CENTER" layoutX="165.0" layoutY="218.0" text="Muaz Scroll System" textAlignment="CENTER">
          <font>
             <Font size="30.0" />
