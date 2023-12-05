@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class SignUpController {
     Stage stage;
@@ -19,19 +20,25 @@ public class SignUpController {
     private TextField password;
 
     public void goHome(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sample.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void printUser(ActionEvent e){
-        System.out.println(username.getText());
-    }
-
-    public void printPwd(ActionEvent e){
-        System.out.println(username.getText() + "     " + password.getText());
+    public void checkPassword (ActionEvent e) throws IOException{
+        if (User.checkUserLogin(username.getText(),password.getText())){
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LoggedIn.fxml")));
+            stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else{
+            System.out.println(username.getText());
+            System.out.println(password.getText());
+            System.out.println("WRONG CREDENTIALS");
+        }
     }
 }
 

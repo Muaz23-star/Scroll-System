@@ -9,14 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpController">
    <children>
-      <Label layoutX="236.0" layoutY="56.0" prefHeight="29.0" prefWidth="184.0" text="Sign up" textAlignment="CENTER">
+      <Label layoutX="236.0" layoutY="56.0" prefHeight="29.0" prefWidth="184.0" text="Log In" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Button layoutX="246.0" layoutY="282.0" mnemonicParsing="false" onAction="#goHome" text="Go back" />
-      <TextField fx:id="username" layoutX="197.0" layoutY="153.0" onAction="#printUser" promptText="Username" />
-      <TextField fx:id="password" layoutX="197.0" layoutY="188.0" onAction="#printPwd" promptText="Password" />
+      <TextField fx:id="username" layoutX="197.0" layoutY="153.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="197.0" layoutY="188.0" promptText="Password" />
+      <Button layoutX="250.0" layoutY="240.0" mnemonicParsing="false" onAction="#checkPassword" text="Log In" />
    </children>
    <effect>
       <Blend />
